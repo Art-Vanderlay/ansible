@@ -138,8 +138,8 @@ or globally by setting ``ssh_args`` in ``ansible.cfg``.
 How do I get Ansible to notice a dead target in a timely manner?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-You can add ``-o ServerAliveInterval=NumberOfSeconds`` in ``ssh_args`` from ``ansible.cfg``. Without this option,
-SSH and therefore Ansible will wait until the TCP connection times out. Another solution is to add ``ServerAliveInterval``
+You can add ``-o ServerAliveInterval=NumberOfSeconds`` in ``ssh_args`` from the ``ssh connection`` plugin's section of ``ansible.cfg``. 
+Without this option, SSH and therefore Ansible will wait until the TCP connection times out. Another solution is to add ``ServerAliveInterval``
 into your global SSH configuration. A good value for ``ServerAliveInterval`` is up to you to decide; keep in mind that
 ``ServerAliveCountMax=3`` is the SSH default so any value you set will be tripled before terminating the SSH session.
 
